@@ -1,9 +1,7 @@
 package search
 
 func BinarySearchIterative(data []int, value int) bool {
-
-	min := 0
-	mid := 0
+	var min, mid int
 	max := len(data) - 1
 
 	for min <= max {
@@ -15,6 +13,18 @@ func BinarySearchIterative(data []int, value int) bool {
 		} else {
 			min = mid + 1
 		}
+	}
+	return false
+}
+
+func BinarySearchRecursive(data []int, value, min, max int) bool {
+	mid := min + (max-min)/2
+	if data[mid] == value {
+		return true
+	} else if value < data[mid] {
+		return BinarySearchRecursive(data, value, min, mid-1)
+	} else {
+		return BinarySearchRecursive(data, value, mid+1, max)
 	}
 
 	return false
