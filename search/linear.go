@@ -1,5 +1,6 @@
 package search
 
+// Complexity: O(n)
 func LinearSearchUnsorted(data []int, value int) bool {
 	for _, item := range data {
 		if item == value {
@@ -9,6 +10,7 @@ func LinearSearchUnsorted(data []int, value int) bool {
 	return false
 }
 
+// Complexity: O(n)
 func LinearSearchSorted(data []int, value int) bool {
 	for _, item := range data {
 		if item == value {

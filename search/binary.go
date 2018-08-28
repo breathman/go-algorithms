@@ -1,5 +1,6 @@
 package search
 
+// Complexity: O(log n)
 func BinarySearchIterative(data []int, value int) bool {
 	var min, mid int
 	max := len(data) - 1
@@ -17,6 +18,7 @@ func BinarySearchIterative(data []int, value int) bool {
 	return false
 }
 
+// Complexity: O(log n)
 func BinarySearchRecursive(data []int, value, min, max int) bool {
 	mid := min + (max-min)/2
 	if data[mid] == value {
