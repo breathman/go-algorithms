@@ -2,18 +2,18 @@ package main
 
 import (
 	"fmt"
-	"github.com/breathman/algoritms/random"
+	"github.com/breathman/algoritms/utils"
 )
 
 func main() {
 
-	a := random.RandInRange(1, 100)
+	a := utils.RandInRange(1, 100)
 	fmt.Println(a)
 
-	b := random.RandSliceInRange(10, 20, 20)
+	b := utils.RandSliceInRange(10, 20, 20)
 	fmt.Println(b)
 
-	c := random.RandSlice(10, 20)
+	c := utils.RandSlice(10, 20)
 	fmt.Println(c)
 
 }
