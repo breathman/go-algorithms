@@ -8,8 +8,7 @@ import (
 
 const (
 	dataRange  = 1000
-	elemsCount = 1000
-	runsCount  = 1000
+	elemsCount = 100
 )
 
 func TestBubbleSort(t *testing.T) {
@@ -20,7 +19,6 @@ func TestBubbleSort(t *testing.T) {
 
 func BenchmarkBubbleSort(b *testing.B) {
 	data := utils.RandSlice(dataRange, elemsCount)
-	b.N = runsCount
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		BubbleSort(data)

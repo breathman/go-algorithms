@@ -1,6 +1,6 @@
 ## package search
 ```
-go test ./search -bench=.
+go test ./search -bench=. -benchtime=1000x
 ```
 
 ##### benchmarks
@@ -35,13 +35,13 @@ go test ./sort -bench=.
 
 | Name                             | Times     | Speed       |
 |----------------------------------|-----------|-------------|
-| BenchmarkBubbleSort-8            |   1000    |  6899 ns/op |
-| BenchmarkQuickSort-8             |   1000    | 14013 ns/op |
+| BenchmarkBubbleSort-8            |  200000   |  6637 ns/op |
+| BenchmarkQuickSort-8             |  100000   | 18201 ns/op |
 
 
 ###### for slice with 1000 elements
 
 | Name                             | Times     | Speed        |
 |----------------------------------|-----------|--------------|
-| BenchmarkBubbleSort-8            |   1000    | 483946 ns/op |
-| BenchmarkQuickSort-8             |   1000    | 134578 ns/op |
+| BenchmarkBubbleSort-8            |   3000    | 495986 ns/op |
+| BenchmarkQuickSort-8             |   5000    | 256800 ns/op |

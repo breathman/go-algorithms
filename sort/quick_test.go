@@ -14,7 +14,6 @@ func TestQuickSort(t *testing.T) {
 
 func BenchmarkQuickSort(b *testing.B) {
 	data := utils.RandSlice(dataRange, elemsCount)
-	b.N = runsCount
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		QuickSort(data)

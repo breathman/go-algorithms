@@ -9,7 +9,6 @@ import (
 const (
 	dataRange  = 2000
 	elemsCount = 1000
-	runsCount  = 1000
 )
 
 func TestBinarySearchIterative(t *testing.T) {
@@ -27,7 +26,6 @@ func BenchmarkBinarySearchIterative(b *testing.B) {
 	data := utils.RandSlice(dataRange, elemsCount)
 	index := utils.RandInRange(0, elemsCount)
 	sort.Ints(data)
-	b.N = runsCount
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		BinarySearchIterative(data, data[index])
@@ -49,7 +47,6 @@ func BenchmarkBinarySearchRecursive(b *testing.B) {
 	data := utils.RandSlice(dataRange, elemsCount)
 	index := utils.RandInRange(0, elemsCount)
 	sort.Ints(data)
-	b.N = runsCount
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		BinarySearchRecursive(data, data[index], 0, len(data)-1)
