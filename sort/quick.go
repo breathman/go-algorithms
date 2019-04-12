@@ -1,6 +1,6 @@
-package main
+package sort
 
-func quickSort(array []int) []int {
+func QuickSort(array []int) []int {
 	var (
 		less   []int
 		more   []int
@@ -22,7 +22,7 @@ func quickSort(array []int) []int {
 			}
 		}
 
-		less, more = quickSort(less), quickSort(more)
+		less, more = QuickSort(less), QuickSort(more)
 
 		less = append(less, pivot)
 		less = append(less, middle...)

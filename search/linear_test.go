@@ -18,10 +18,11 @@ func TestLinearSearchUnsorted(t *testing.T) {
 
 func BenchmarkLinearSearchUnsorted(b *testing.B) {
 	data := utils.RandSlice(dataRange, elemsCount)
+	index := utils.RandInRange(0, elemsCount)
 	b.N = runsCount
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		LinearSearchUnsorted(data, data[i])
+		LinearSearchUnsorted(data, data[index])
 	}
 }
 
@@ -38,10 +39,11 @@ func TestLinearSearchSorted(t *testing.T) {
 
 func BenchmarkLinearSearchSorted(b *testing.B) {
 	data := utils.RandSlice(dataRange, elemsCount)
+	index := utils.RandInRange(0, elemsCount)
 	sort.Ints(data)
 	b.N = runsCount
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		LinearSearchSorted(data, data[i])
+		LinearSearchSorted(data, data[index])
 	}
 }
