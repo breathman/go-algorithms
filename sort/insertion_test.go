@@ -6,21 +6,16 @@ import (
 	"testing"
 )
 
-const (
-	dataRange  = 10000
-	elemsCount = 100
-)
-
-func TestBubbleSort(t *testing.T) {
+func TestInsertionSort(t *testing.T) {
 	s := []int{2, 5, 3, 8, 1, 1, 6}
-	res := BubbleSort(s)
+	res := InsertionSort(s)
 	assert.Equal(t, res, []int{1, 1, 2, 3, 5, 6, 8})
 }
 
-func BenchmarkBubbleSort(b *testing.B) {
+func BenchmarkInsertionSort(b *testing.B) {
 	data := utils.RandSlice(dataRange, elemsCount)
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		BubbleSort(data)
+		InsertionSort(data)
 	}
 }

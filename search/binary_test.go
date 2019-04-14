@@ -8,7 +8,7 @@ import (
 
 const (
 	dataRange  = 2000
-	elemsCount = 1000
+	elemsCount = 10000
 )
 
 func TestBinarySearchIterative(t *testing.T) {

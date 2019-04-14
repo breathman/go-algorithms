@@ -15,7 +15,7 @@ go test ./search -bench=. -benchtime=1000x
 | BenchmarkLinearSearchSorted-8    |   1000    |  39.1 ns/op |
 
 
-###### for slice with 1000 elements
+###### for slice with 10000 elements
 
 | Name                             | Times     | Speed       |
 |----------------------------------|-----------|-------------|
@@ -33,15 +33,17 @@ go test ./sort -bench=.
 
 ###### for slice with 100 elements
 
-| Name                             | Times     | Speed       |
-|----------------------------------|-----------|-------------|
-| BenchmarkBubbleSort-8            |  200000   |  6637 ns/op |
-| BenchmarkQuickSort-8             |  100000   | 18201 ns/op |
-
-
-###### for slice with 1000 elements
-
 | Name                             | Times     | Speed        |
 |----------------------------------|-----------|--------------|
-| BenchmarkBubbleSort-8            |   3000    | 495986 ns/op |
-| BenchmarkQuickSort-8             |   5000    | 256800 ns/op |
+| BenchmarkBubbleSort-8            |  200000   |  6637 ns/op  |
+| BenchmarkInsertionSort-8         |  500000   |  2995 ns/op  |
+| BenchmarkQuickSort-8             |  100000   |  18201 ns/op |
+
+
+###### for slice with 10000 elements
+
+| Name                             | Times     | Speed          |
+|----------------------------------|-----------|----------------|
+| BenchmarkBubbleSort-8            |   20      | 52669694 ns/op |
+| BenchmarkInsertionSort-8         |   50      | 25950356 ns/op |
+| BenchmarkQuickSort-8             |   500     | 3171612 ns/op  |
