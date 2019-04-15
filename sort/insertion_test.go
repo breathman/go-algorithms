@@ -2,14 +2,14 @@ package sort
 
 import (
 	"github.com/breathman/algoritms/utils"
-	"github.com/influxdata/influxdb/pkg/testing/assert"
+	"gotest.tools/assert"
 	"testing"
 )
 
 func TestInsertionSort(t *testing.T) {
 	s := []int{2, 5, 3, 8, 1, 1, 6}
 	res := InsertionSort(s)
-	assert.Equal(t, res, []int{1, 1, 2, 3, 5, 6, 8})
+	assert.DeepEqual(t, res, []int{1, 1, 2, 3, 5, 6, 8})
 }
 
 func BenchmarkInsertionSort(b *testing.B) {
