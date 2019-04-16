@@ -25,5 +25,4 @@ func TestQueue(t *testing.T) {
 	top, err := q.Top()
 	assert.Equal(t, 5, top)
 	assert.NilError(t, err)
-
 }
