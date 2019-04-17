@@ -35,17 +35,19 @@ go test ./sort -bench=.
 
 | Name                             | Times     | Speed        |
 |----------------------------------|-----------|--------------|
-| BenchmarkBubbleSort-8            |  200000   |  6637 ns/op  |
-| BenchmarkInsertionSort-8         |  500000   |  2995 ns/op  |
+| BenchmarkBubbleSort-8            |  200000   |  6637  ns/op |
+| BenchmarkInsertionSort-8         |  500000   |  2995  ns/op |
+| BenchmarkMergeSort-8             |  500000   |  2616  ns/op |
 | BenchmarkQuickSort-8             |  100000   |  18201 ns/op |
-| BenchmarkSelectionSort-8         |  300000   |  5433 ns/op  |
+| BenchmarkSelectionSort-8         |  300000   |  5433  ns/op |
 
 
 ###### for slice with 10000 elements
 
 | Name                             | Times     | Speed           |
 |----------------------------------|-----------|-----------------|
-| BenchmarkBubbleSort-8            |   20      | 52669694 ns/op  |
-| BenchmarkInsertionSort-8         |   50      | 25950356 ns/op  |
-| BenchmarkQuickSort-8             |   500     | 3171612 ns/op   |
+| BenchmarkBubbleSort-8            |   20      | 52669694  ns/op |
+| BenchmarkInsertionSort-8         |   50      | 25950356  ns/op |
+| BenchmarkMergeSort-8             |   3000    | 412066    ns/op |
+| BenchmarkQuickSort-8             |   500     | 3171612   ns/op |
 | BenchmarkSelectionSort-8         |   10      | 108949321 ns/op |
