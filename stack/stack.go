@@ -35,8 +35,5 @@ func (s *Stack) Size() int {
 }
 
 func (s *Stack) IsEmpty() bool {
-	if s.Size() == 0 {
-		return true
-	}
-	return false
+	return s.Size() == 0
 }

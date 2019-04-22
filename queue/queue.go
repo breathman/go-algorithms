@@ -35,8 +35,5 @@ func (q *Queue) Size() int {
 }
 
 func (q *Queue) IsEmpty() bool {
-	if q.Size() == 0 {
-		return true
-	}
-	return false
+	return q.Size() == 0
 }
